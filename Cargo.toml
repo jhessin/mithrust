@@ -1,0 +1,9 @@
+[package]
+name = "mithrust"
+description = "A rust web framework inspired by mithriljs"
+license = "MIT"
+version = "0.0.1"
+authors = ["Jim Hessin <jhessin@gmail.com>"]
+edition = "2018"
+
+[dependencies]
