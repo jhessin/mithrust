@@ -3,7 +3,8 @@ extern crate stdweb;
 
 fn main() {
     let message = "Hello, WASM!";
-    js!{
-        alert( @{message} );
-    };
+    let message_node = stdweb::web::document().create_text_node(message);
+    js! {
+        document.body.appendChild(@{message_node})
+    }
 }
