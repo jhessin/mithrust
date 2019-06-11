@@ -1,6 +1,6 @@
-/target
-**/*.rs.bk
-Cargo.lock
+dist
+node_modules
+crate/pkg
+crate/target
+crate/wasm-pack.log
 .cache/
-dist/
-node_modules/
