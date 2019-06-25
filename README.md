@@ -1,15 +1,15 @@
 <div align="center">
 
-  <h1><code>wasm-pack-template</code></h1>
+  <h1><code>rust-webpack-template</code></h1>
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+  <strong>Kickstart your Rust, WebAssembly, and Webpack project!</strong>
 
   <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
+    <a href="https://travis-ci.org/rustwasm/create-wasm-app"><img src="https://img.shields.io/travis/rustwasm/create-wasm-app.svg?style=flat-square" alt="Build Status" /></a>
   </p>
 
   <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
+    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/index.html">Tutorial</a>
     <span> | </span>
     <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
   </h3>
@@ -19,51 +19,35 @@
 
 ## About
 
-[**📚 Read this template tutorial! 📚**][template-docs]
+This template is designed for creating monorepo-style Web applications with
+Rust-generated WebAssembly and Webpack without publishing your wasm to NPM.
 
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
+[**📚 Read this template's tutorial! 📚**][template-docs]
 
 Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
 templates and usages of `wasm-pack`.
 
 [tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
+[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/index.html
 
-## 🚴 Usage
+## 🚴 Using This Template
 
-### 🐑 Use `cargo generate` to Clone this Template
+You can use `npm init` to clone this template:
 
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
-
-```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
+```sh
+npm init rust-webpack my-app
 ```
 
-### 🛠️ Build with `wasm-pack build`
-
-```
-wasm-pack build
-```
-
-### 🔬 Test in Headless Browsers with `wasm-pack test`
-
-```
-wasm-pack test --headless --firefox
-```
-
-### 🎁 Publish to NPM with `wasm-pack publish`
-
-```
-wasm-pack publish
-```
+[Afterwards check out the full documentation for exploring it][template-docs].
 
 ## 🔋 Batteries Included
 
-* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
-  between WebAssembly and JavaScript.
-* [`console_error_panic_hook`](https://github.com/rustwasm/console_error_panic_hook)
-  for logging panic messages to the developer console.
-* [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
-  for small code size.
+This template comes pre-configured with all the boilerplate for compiling Rust
+to WebAssembly and hooking into a Webpack build pipeline.
+
+* `npm start` -- Serve the project locally for development at
+  `http://localhost:8080`. It auto-reloads when you make any changes.
+
+* `npm run build` -- Bundle the project (in production mode).
+
+* `npm test` -- Run the project's unit tests.
